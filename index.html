@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Dodopedia - Everything About Dogs</title>
+<title>Dogopedia - Everything About Dogs</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -15,7 +15,19 @@ body {
   
 
 }
+.start {
+  background-color: lightcyan;
+  font-size: 13px;
+  border: 2px solid black;
+  border-radius: 12px;
+  padding:  0em 1em;
+}
+.start1 {
+  border : 3px solid black ;
+  border-radius: 15px;
+  padding:  2.5px;
 
+}
 
 .sidenav {
   height: 100%;
@@ -24,7 +36,7 @@ body {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #F0F8FF;
+  background-color: #FFFAF0;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -64,17 +76,22 @@ body {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
+img {
+  border-radius: 50%;
+  float : left;
+  margin-left: 32px;
+}
 </style>
 </head>
 <body>
 
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a style = "font-size : 28px ;"><b>Dogs</b></a>
-  <a style = "font-size : 28px ;"><b>Rabbits</b></a>
-  <a style = "font-size : 28px ;"><b>Birds</b></a>
-  <a style = "font-size : 28px;"><b>Cats</b></a>
-  <a style = "font-size : 28px ;"><b>Contact</b></a>
+  <a style = "font-size : 28px ;"><b class = "start1">Dogs</b></a>
+  <a style = "font-size : 28px ;"><b class = "start1">Rabbits</b></a>
+  <a style = "font-size : 28px ;"><b class = "start1">Birds</b></a>
+  <a style = "font-size : 28px;"><b class = "start1">Cats</b></a>
+  <a style = "font-size : 28px ;"><b class = "start1">Contact</b></a>
 </div>
 
 
@@ -104,7 +121,19 @@ function closeNav() {
   </div>
 </nav>
 <div>
-  <p>On this cite we will</p>
+  <p class = "start">On this site we will give an idea about different types of dog covering suitability, behavioural traits, common medical issues and more. We'll be starting with the most common breeds, but this will grow in time to include over 400 different breeds.</p>
+
+  <p class ="start">We will also cover certain bird, rabbit and cat breeds </p>
+  <p><br></p>
+
+</div>
+
+<div>
+  <img src = "dog1.jpg" alt = "Indian Pariah Dog" width = "300" height = "300">
+  <img src = "dog2.jpg" alt = "Labrador" width = "300" height = "300">
+  <img src = "dog3.jpg" alt = "German Shepherd" width = "300" height = "300">
+  <img src = "dog4.jpg" alt = "Rotweiler" width = "300" height = "300"
+ 
 </div>
   
 
