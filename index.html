@@ -17,6 +17,8 @@ body {
 }
 .start {
   background-color: lightcyan;
+  margin-left: 5px;
+  margin-right: 5px;
   font-size: 13px;
   border: 2px solid black;
   border-radius: 12px;
@@ -27,6 +29,10 @@ body {
   border-radius: 15px;
   padding:  2.5px;
 
+}
+.para1 {
+  font-size: 20px;
+  margin-left: 80px;
 }
 
 .sidenav {
@@ -77,10 +83,20 @@ body {
   .sidenav a {font-size: 18px;}
 }
 img {
-  border-radius: 50%;
-  float : left;
-  margin-left: 32px;
-  padding: 10px;
+  margin-left: 85px;
+  border-radius: 50px;
+}
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 2px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 </style>
 </head>
@@ -127,14 +143,16 @@ function closeNav() {
   <p class ="start">We will also cover certain bird, rabbit and cat breeds </p>
   <p><br></p>
 
-</div>
-
-<div>
-  <img src = "dog1.jpg" alt = "Indian Pariah Dog" width = "300" height = "300">
-  <img src = "dog2.jpg" alt = "Labrador" width = "300" height = "300">
-  <img src = "dog3.jpg" alt = "German Shepherd" width = "300" height = "300">
-  <img src = "dog4.jpg" alt = "Rotweiler" width = "300" height = "300"
- 
+<div class="row">
+  <div class="column">
+    <img src="dog1.jpg" alt="Indian Pariah Dog" width = "300" height = "300">
+  </div>
+  <div class="column">
+    <img src="dog2.jpg" alt="Labrador Dog" width = "300" height = "300">
+  </div>
+  <div class="column">
+    <img src="dog3.jpg" alt="German Shepherd Dog" width = "300" height = "300">
+  </div>
 </div>
   
 
