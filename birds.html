@@ -4,11 +4,27 @@
 <title>Birdsopedia - Everything About Birds</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <style>
+
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   background-color: lightgray;
+}
+a:link{
+  color: black; /* Unvisited Link */
+}
+a:visited {  /* Visited link */
+  color : black;
+}
+a:hover {  /* Mouse over link */
+  color : black;
+}
+a:active {
+  color : grey;
 }
 .image {
   margin-left: 5px;
@@ -18,6 +34,7 @@ body {
 }
 .image1 {
   border-radius: 47%;
+  border: 5px solid black;
   margin-left: auto;
   margin-right: auto;
   display: block;
@@ -32,7 +49,7 @@ body {
 .text1 {
   text-align: center;
   font-family: monospace;
-  font-size: 20px;
+  font-size: 15px;
 }
 .start {
   background-color: lightcyan;
@@ -97,6 +114,8 @@ body {
     text-align: left;
   }
 }
+
+
 </style>
 </head>
 <body>
@@ -132,33 +151,104 @@ function myFunction() {
   <br>
 </div>
 
-<div>
+<!--<div>
+  <img class = "image1" src = "amazonparrot.jpg" alt = "Amazon Parrot" width = "50%">
   <p class = "text1"><a href = "#">Amazon Parrot</a></p>
   <br>
-  <img class = "image1" src = "amazonparrot.jpg" alt = "Amazon Parrot" width = "50%">
-  <br>
 </div>
 
 <div>
+  <img class = "image1" src = "africangreyparrot.jpg" alt = "African Grey Parrot" width = "50%">
   <p class = "text1"><a href = "#">African Grey Parrot</a></p>
   <br>
-  <img class = "image1" src = "africangreyparrot.jpg" alt = "African Grey Parrot" width = "50%">
-  <br>
 </div>
 
 <div>
+  <img class = "image1" src = "alexandrine.jpg" alt = "Alexandrine Parakeet" width = "50%">
   <p class = "text1"><a href =  "#Alexandrine Parakeet">Alexandrine Parakeet</a></p>
   <br>
-  <img class = "image1" src = "alexandrine.jpg" alt = "Alexandrine Parakeet" width = "50%">
+</div>
+
+<div>
+  <img class = "image1" src = "macau.jpg" alt = "blue-and-gold macaw" width = "50%">
+  <p class = "text1"><a href =  "#">Blue-and-Gold Macaw</a></p>
   <br>
 </div>
 
 <div>
-  <p class = "text1"><a href =  "#">Blue-and-Gold Macaw</a></p>
+  <img class = "image1" src = "adelie.jpg" alt = "Adelie Penguin" width = "50%">
+  <p class = "text1"><a href =  "#">Adelie Penguin</a></p>
   <br>
-  <img class = "image1" src = "macau.jpg" alt = "blue-and-gold macaw" width = "50%">
-  <br>
+</div> -->
+
+
+
+<!--Checking Of a Images file-->
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="#" target="_blank">
+          <img src="adelie.jpg" alt="Adelie Penguin" style="width:100%; height:270px">
+          <div class="caption">
+            <p class = "text1">Adelie Penguin</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="#" target="_blank">
+          <img src="alexandrine.jpg" alt="Alexandrine Parakeet" style="width:100%; height:270px">
+          <div class="caption">
+            <p class = "text1">Alexandrine Parakeet</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="#" target="_blank">
+          <img src="africangreyparrot.jpg" alt="African Grey Parrot" style="width:100%; height:270px">
+          <div class="caption">
+            <p class = "text1">African Grey Parrot</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="#" target="_blank">
+          <img src="adelie.jpg" alt="Adelie Penguin" style="width:100%; height:270px">
+          <div class="caption">
+            <p class = "text1">Adelie Penguin</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="#" target="_blank">
+          <img src="adelie.jpg" alt="Adelie Penguin" style="width:100%; height:270px">
+          <div class="caption">
+            <p class = "text1">Adelie Penguin</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="#" target="_blank">
+          <img src="adelie.jpg" alt="Adelie Penguin" style="width:100%; height:270px">
+          <div class="caption">
+            <p class = "text1">Adelie Penguin</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
 </div>
+
 
 </body>
 </html>
