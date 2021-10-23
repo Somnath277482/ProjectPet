@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Birdsopedia - Everything About Birds</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: lightgray;
+}
+a:link{
+  color: black; /* Unvisited Link */
+}
+a:visited {  /* Visited link */
+  color : black;
+}
+a:hover {  /* Mouse over link */
+  color : black;
+}
+a:active {
+  color : grey;
+}
+.image {
+  margin-left: 5px;
+  height: auto;
+  border-radius: 25px;
+
+}
+.image1 {
+  border-radius: 47%;
+  border: 5px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+
+}
+.text {
+  margin-left: 3px;
+  font-size: 20px;
+  text-shadow: 1px 1px black;
+
+}
+.text1 {
+  text-align: center;
+  font-family: monospace;
+  font-size: 15px;
+}
+.start {
+  background-color: lightcyan;
+  margin-left: 3px;
+  margin-right: 3px;
+  font-size: 13px;
+  border: 2px solid black;
+  border-radius: 25px;
+  padding:  6px;
+}
+.start1 {
+  border : 2px solid black;
+  display: inline-block;
+  border-radius: 12px;
+  padding:  3px;
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: lightcyan;
+
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: lightgrey;
+  background-image: url('side1.jpg') ;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #000000;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 40px;
+  margin-left: 50px;
+}
+.sty{
+  font-family: sofia;
+  text-align : right;
+  font-size : 35px;
+  color: white;
+
+
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: grey;
+  border-radius: 20px;
+  margin-left: 3px ;
+  margin-right: 3px;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: yellowgreen;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: black;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+
+</style>
+</head>
+<body>
+
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href = "index.html" style = "font-size : 28px ;"><b class = "start1">Dogs</b></a>
+  <a style = "font-size : 28px ;"><b class = "start1">Rabbits</b></a>
+  <a href = "birds.html" style = "font-size : 28px ;"><b class = "start1">Birds</b></a>
+  <a style = "font-size : 28px;"><b class = "start1">Cats</b></a>
+  <a style = "font-size : 28px ;"><b class = "start1">Contact</b></a>
+</div>
+
+
+<span style="font-size:30px;cursor:pointer ; color : grey ;" onclick="openNav()">&#9776; <b>Explore</b></span>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+<div class="topnav" id="myTopnav">
+  <a class="active">Birdsopedia</a>
+  <a href="index.html">Home</a>
+  <a href="#contact">News</a>
+  <a href="#about">Facts</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+<div>
+  <br>
+  <p class = "start">Birds, members of the class Aves, include more than 10,400 living species. Their feathers distinguish them from all other classes of animal; no other animals on earth have them. If you see an animal with feathers, it’s undoubtedly a bird. Like mammals, birds are warm-blooded vertebrates with four-chambered hearts. However, they are more closely related to reptiles and are believed to have evolved from dinosaurs. Their forelimbs have been modified into wings over many millions of years of evolution, they lay hard-shelled eggs and they have exceptional vision – the most acute of their senses. Most birds are diurnal, meaning they sleep at night. Most can fly, but flightless species exist.</p>
+</div>
+
+<div>
+  <img class = "image" src = "birds1.jpg" alt = "birds" width = "99%">
+  <h4 class = "text">Types Of Birds</h4>
+  <br>
+</div>
+
+<!--<div>
+  <img class = "image1" src = "amazonparrot.jpg" alt = "Amazon Parrot" width = "50%">
+  <p class = "text1"><a href = "#">Amazon Parrot</a></p>
+  <br>
+</div>
+
+<div>
+  <img class = "image1" src = "africangreyparrot.jpg" alt = "African Grey Parrot" width = "50%">
+  <p class = "text1"><a href = "#">African Grey Parrot</a></p>
+  <br>
+</div>
+
+<div>
+  <img class = "image1" src = "alexandrine.jpg" alt = "Alexandrine Parakeet" width = "50%">
+  <p class = "text1"><a href =  "#Alexandrine Parakeet">Alexandrine Parakeet</a></p>
+  <br>
+</div>
+
+<div>
+  <img class = "image1" src = "macau.jpg" alt = "blue-and-gold macaw" width = "50%">
+  <p class = "text1"><a href =  "#">Blue-and-Gold Macaw</a></p>
+  <br>
+</div>
+
+<div>
+  <img class = "image1" src = "adelie.jpg" alt = "Adelie Penguin" width = "50%">
+  <p class = "text1"><a href =  "#">Adelie Penguin</a></p>
+  <br>
+</div> -->
+
+
+
+<!--Checking Of a Images file-->
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="#" target="_blank">
+          <img src="adelie.jpg" alt="Adelie Penguin" style="width:100%; height:270px">
+          <div class="caption">
+            <p class = "text1">Adelie Penguin</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="#" target="_blank">
+          <img src="alexandrine.jpg" alt="Alexandrine Parakeet" style="width:100%; height:270px">
+          <div class="caption">
+            <p class = "text1">Alexandrine Parakeet</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="#" target="_blank">
+          <img src="africangreyparrot.jpg" alt="African Grey Parrot" style="width:100%; height:270px">
+          <div class="caption">
+            <p class = "text1">African Grey Parrot</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="#" target="_blank">
+          <img src="adelie.jpg" alt="Adelie Penguin" style="width:100%; height:270px">
+          <div class="caption">
+            <p class = "text1">Adelie Penguin</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="#" target="_blank">
+          <img src="adelie.jpg" alt="Adelie Penguin" style="width:100%; height:270px">
+          <div class="caption">
+            <p class = "text1">Adelie Penguin</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="#" target="_blank">
+          <img src="adelie.jpg" alt="Adelie Penguin" style="width:100%; height:270px">
+          <div class="caption">
+            <p class = "text1">Adelie Penguin</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>

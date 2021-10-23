@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dogopedia - Everything About Dogs</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+body {
+  font-family: "Lato", sans-serif;
+  background-color : lightgray ;
+  background-attachment: scroll ;
+  background-size : cover;
+  
+
+}
+.text1 {
+  text-align: center;
+  font-family: monospace;
+  font-size: 15px;
+}
+.start {
+  background-color: lightcyan;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 13px;
+  border: 2px solid black;
+  border-radius: 12px;
+  padding:  0em 1em;
+}
+.start1 {
+  border : 2px solid black;
+  display: inline-block;
+  border-radius: 10px;
+  padding:  3px;
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: lightcyan;
+
+}
+.start2 {
+  border : 2px solid black;
+  display: inline-block;
+  border-radius: 12px;
+  padding:  3px;
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: black;
+  color: white;
+
+}
+.para1 {
+  font-size: 20px;
+  margin-left: 80px;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: lightgrey;
+  background-image: url('side1.jpg') ;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #000000;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 40px;
+  margin-left: 50px;
+}
+.sty{
+  font-family: sofia;
+  text-align : right;
+  font-size : 35px;
+  color: white;
+
+
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: grey;
+  border-radius: 20px;
+  margin-left: 3px ;
+  margin-right: 3px;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: yellowgreen;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: black;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a style = "font-size : 28px ;"><b class = "start1">Dogs</b></a>
+  <a style = "font-size : 28px ;"><b class = "start1">Rabbits</b></a>
+  <a href = "birds.html" style = "font-size : 28px ;"><b class = "start1">Birds</b></a>
+  <a style = "font-size : 28px;"><b class = "start1">Cats</b></a>
+  <a style = "font-size : 28px ;"><b class = "start1">Contact</b></a>
+</div>
+
+
+<span style="font-size:30px;cursor:pointer ; color : grey ;" onclick="openNav()">&#9776; <b>Explore</b></span>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+<div class="topnav" id="myTopnav">
+  <a class="active">Dogopedia</a>
+  <a href="index.html">Home</a>
+  <a href="#contact">Dog Breeds</a>
+  <a href="#about">Facts</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+
+<div><br>
+  <p class = "start">On this site we will give an idea about different types of dog covering suitability, behavioural traits, common medical issues and more. We'll be starting with the most common breeds, but this will grow in time to include over 400 different breeds.</p>
+
+  <p class ="start1" style = "font-size:13px;">We will also cover certain bird, rabbit and cat breeds </p>
+  <p><br></p>
+</div>
+<div>
+  <h4 class = "start2" style = "margin-left:5px; font-family:monospace; font-size:20px">Types Of Dogs</h4>
+</div>
+<div><br></div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="pariah.html" target="_blank">
+          <img src="dog1111.jpg" alt="Indian Pariah Dog" style="width:100%; height:270px">
+          <div class="caption">
+            <p class = "text1">Indian Pariah Dog (INDog)</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="labrador.html" target="_blank">
+          <img src="on-a-grass-black-labrador-wallpaper-in-1920p.jpg" alt="Labrador" style="width:100%; height:270px">
+          <div class="caption">
+            <p class = "text1">Labrador</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="gershepherd.html" target="_blank">
+          <img src="dog3.jpg" alt="German Shepherd" style="width:100%; height:270px">
+          <div class="caption">
+            <p class = "text1">German Shepherd</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="rottweiler.html" target="_blank">
+          <img src="dog4.jpg" alt="Rottweiler" style="width:100%; height:270px">
+          <div class="caption">
+            <p class = "text1">Rottweiler</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="beagle.html" target="_blank">
+          <img src="dog11.jpg" alt="Beagle" style="width:100%; height:270px">
+          <div class="caption">
+            <p class = "text1">Beagle</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="#" target="_blank">
+          <img src="dog10.jpg" alt="German Spitz" style="width:100%; height:270px">
+          <div class="caption">
+            <p class = "text1">German Spitz</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="#" target="_blank">
+          <img src="dog18.jpg" alt="Pomeranian" style="width:100%; height:270px">
+          <div class="caption">
+            <p class = "text1">Pomeranian</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="#" target="_blank">
+          <img src="dog17.png" alt="Cocker Spanial" style="width:100%; height:270px">
+          <div class="caption">
+            <p class = "text1">Cocker Spanial</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="#" target="_blank">
+          <img src="dog7.jpg" alt="Siberian Husky" style="width:100%; height:270px">
+          <div class="caption">
+            <p class = "text1">Siberian Husky</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="#" target="_blank">
+          <img src="akita.jpg" alt="Akita" style="width:100%; height:270px">
+          <div class="caption">
+            <p class = "text1">Akita</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="#" target="_blank">
+          <img src="dog12.jpg" alt="Border Coolie" style="width:100%; height:270px">
+          <div class="caption">
+            <p class = "text1">Border Coolie</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="#" target="_blank">
+          <img src="dog9.jpg" alt="Pug" style="width:100%; height:270px">
+          <div class="caption">
+            <p class = "text1">Pug</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="#" target="_blank">
+          <img src="dog8.jpg" alt="Lhasa Apso" style="width:100%; height:270px">
+          <div class="caption">
+            <p class = "text1">Lhasa Apso</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="#" target="_blank">
+          <img src="dog16.jpg" alt="Chihuahua" style="width:100%; height:270px">
+          <div class="caption">
+            <p class = "text1">Chihuahua</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="#" target="_blank">
+          <img src="dog13.jpg" alt="Dalmatian" style="width:100%; height:270px">
+          <div class="caption">
+            <p class = "text1">Dalmatian</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="#" target="_blank">
+          <img src="boxer.jpg" alt="Boxer" style="width:100%; height:270px">
+          <div class="caption">
+            <p class = "text1">Boxer</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="#" target="_blank">
+          <img src="bulldog.jpg" alt="Bull Dog" style="width:100%; height:270px">
+          <div class="caption">
+            <p class = "text1">Bull Dog</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="#" target="_blank">
+          <img src="bullmastiff.jpg" alt="Bullmastiff" style="width:100%; height:270px">
+          <div class="caption">
+            <p class = "text1">Bullmastiff</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="#" target="_blank">
+          <img src="doberman.jpg" alt="Doberman" style="width:100%; height:270px">
+          <div class="caption">
+            <p class = "text1">Doberman</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="#" target="_blank">
+          <img src="dogoargentino.jpg" alt="Dogo Argentino" style="width:100%; height:270px">
+          <div class="caption">
+            <p class = "text1">Dogo Argentino</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="#" target="_blank">
+          <img src="greatdane.jpg" alt="Great Dane" style="width:100%; height:270px">
+          <div class="caption">
+            <p class = "text1">Great Dane</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="#" target="_blank">
+          <img src="retriever.jpg" alt="Golden Retriever" style="width:100%; height:270px">
+          <div class="caption">
+            <p class = "text1">Golden Retriever</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="#" target="_blank">
+          <img src="greyhound.jpg" alt="Grey Hound" style="width:100%; height:270px">
+          <div class="caption">
+            <p class = "text1">Grey Hound</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="#" target="_blank">
+          <img src="mastiff.jpg" alt="Mastiff" style="width:100%; height:270px">
+          <div class="caption">
+            <p class = "text1">Mastiff</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="#" target="_blank">
+          <img src="pitbull.jpg" alt="Pit Bull" style="width:100%; height:270px">
+          <div class="caption">
+            <p class = "text1">Pit Bull</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="#" target="_blank">
+          <img src="rajapalayam.jpg" alt="Rajapalayam" style="width:100%; height:270px">
+          <div class="caption">
+            <p class = "text1">Rajapalayam</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="#" target="_blank">
+          <img src="St. Bernard.jpg" alt="St. Bernard" style="width:100%; height:270px">
+          <div class="caption">
+            <p class = "text1">St. Bernard</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html> 
